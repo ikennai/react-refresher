@@ -1,9 +1,10 @@
 {
-    "extends": "eslint:recommended",
+    // "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
             "jsx": true
-        }
+        },
+        "sourceType": "module" // TODO: Look this up
     }
 }
