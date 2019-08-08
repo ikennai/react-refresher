@@ -3,24 +3,14 @@ import React from 'react';
 import './App.css';
 
 // Component Imports
+import Header from './layout/Header/Header';
 import Home from './Home/Home';
 
-function App() {
-    const greetingTarget = `World`;
-    
+function App() {    
     return (
         <div className="App">
-            <header className="App-header">
-                <h1>Future Design Works - React Lab</h1>
-            </header>
-            <main>
-                <section>
-                    <img src="https://www.dev.education/images/logo.png" alt="DEV Education" />
-                    <a href="http://www.drigwedds.com" target="_blank">Visit My Dentist</a>
-
-                    <Home />
-                </section>
-            </main>
+            <Header />
+            <Home />
         </div>
     );
 }
