@@ -1,6 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+
+// Component Imports
+import Home from './Home/Home';
 
 function App() {
     const greetingTarget = `World`;
@@ -15,11 +18,7 @@ function App() {
                     <img src="https://www.dev.education/images/logo.png" alt="DEV Education" />
                     <a href="http://www.drigwedds.com" target="_blank">Visit My Dentist</a>
 
-                    <div>
-                        Hello, { greetingTarget } <br />
-                        I'm executing - { (() => console.log('>>> executed!'))() }. <br />
-                        A function was { (() => `executed`)() }
-                    </div>
+                    <Home />
                 </section>
             </main>
         </div>
