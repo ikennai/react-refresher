@@ -5,11 +5,19 @@ import React, { Component } from 'react';
 import './Home.css';
 
 class Home extends Component {
+    constructor() {
+        super(); // TODO: Refresh super
+
+        this.state = {
+            name: 'Ikenna'
+        }
+    }
+
     render() {
         return (
             <div className="Home">
                 <h2>Welcome to Future Design Works</h2>
-                <p>This is the home component.</p>
+                <p>I'm the founder of the company, {this.state.name}.</p>
 
                 <button 
                     style={{

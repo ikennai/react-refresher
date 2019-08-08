@@ -1,3 +1,10 @@
+# React Refresher
+I wanted to get up to speed with React on my own time since I've using Angular at my current employer but we may/may not start using React in some of our other projects. So this is the journey... from beginning to end of the React Cookbook.
+
+I hope to release a few side projects in React soon.
+
+## create-react-app details
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
