@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Content extends Component {
-    render() {
-        const { children } = this.props;
+const Content = props => {
+    const { children } = props;
 
-        return (
-            <main>
-                {children}
-            </main>
-        );
-    }
-}
+    return (
+        <main>
+            {children}
+        </main>
+    );
+};
 
 // Set prop types
 Content.propTypes = {
