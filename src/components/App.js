@@ -15,7 +15,7 @@ import Home from './Home/Home';
 function App() {    
     return (
         <div className="App">
-            <Header title="Testing" />
+            <Header title="Learning React" />
             <Content>
                 <Home />
             </Content>

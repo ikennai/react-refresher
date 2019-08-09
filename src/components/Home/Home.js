@@ -6,14 +6,25 @@ import './Home.css';
 
 class Home extends Component {
     constructor() {
-        super(); // TODO: Refresh super
+        super();
 
         this.state = {
             name: 'Ikenna'
         }
     }
 
+    componentDidMount() {
+        console.log(`>>> running componentDidMount`);
+        setTimeout(() => {
+            this.setState({
+                name: 'Ikenna Igwe'
+            })
+        }, 1000);
+    }
+
     render() {
+        console.log(`Name: ${this.state.name}`);
+
         return (
             <div className="Home">
                 <h2>Welcome to Future Design Works</h2>
