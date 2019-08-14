@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import uuidv4 from 'uuidv4';
 
+// Styles
+import './Todo.css';
+
 class Todo extends Component {
     constructor() {
         super();
