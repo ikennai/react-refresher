@@ -4,6 +4,9 @@ import uuidv4 from 'uuidv4';
 // Styles
 import './Todo.css';
 
+// Component Imports
+import List from './List';
+
 class Todo extends Component {
     constructor() {
         super();
@@ -15,34 +18,20 @@ class Todo extends Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         // Setting default tasks
-        this.setState({
-            items: [
-                {
-                    id: uuidv4(),
-                    task: 'Pay the rent',
-                    completed: false
-                },
-                {
-                    id: uuidv4(),
-                    task: 'Go to the gym',
-                    completed: false
-                },
-                {
-                    id: uuidv4(),
-                    task: 'Do my homework',
-                    completed: false
-                }
-            ]
-        });
+        const state = JSON.parse(localStorage.getItem('todoState') || JSON.stringify({
+            items: []
+        }));
+
+        // Create local storage object
+        localStorage.setItem('todoState', JSON.stringify(state));
+
+        this.setState({ ...state });
     }
 
     handleOnChange = e => {
         const { target: { value } } = e;
-
-        console.log('>>> target', target, '>>> value', value);
-        console.log('>>> event', e);
 
         // Update our task state with the input value
         this.setState({
@@ -57,17 +46,23 @@ class Todo extends Component {
         // Once submitted, we reset the task value and push
         // the new task to the items array.
         if (this.state.task.trim() !== '') {
+            const updatedItems = [
+                ...this.state.items,
+                {
+                    id: uuidv4(),
+                    task: this.state.task,
+                    complete: false
+                }
+            ];
+
+            // Save new item to local storage
+            localStorage.setItem('todoState', JSON.stringify({ items: updatedItems }));
+
+            // Update state
             this.setState({
                 task: '',
-                items: [
-                    ...this.state.items,
-                    {
-                        id: uuidv4(),
-                        task: this.state.task,
-                        complete: false
-                    }
-                ]
-            })
+                items: [...updatedItems]
+            });
         }
     }
 
@@ -81,10 +76,12 @@ class Todo extends Component {
         // Updating the state with the new updated task...
         this.setState({
             items: [
-                ...this.state.items,
-                ...foundTask
+                ...this.state.items
             ]
         });
+
+        // Save new item to local storage
+        localStorage.setItem('todoState', JSON.stringify({ items: this.state.items }));
     }
 
     removeTask = id => {
@@ -95,6 +92,9 @@ class Todo extends Component {
         this.setState({
             items: filteredTasks
         });
+
+        // Update local state storage
+        localStorage.setItem('todoState', JSON.stringify({ items: this.state.items }));
     }
 
     render() {
@@ -104,13 +104,13 @@ class Todo extends Component {
 
                 <form onSubmit={this.handleOnSubmit}>
                     <input
-                        value={this.state.task} 
+                        value={this.state.task}
                         onChange={this.handleOnChange}
                     />
                 </form>
 
-                <List 
-                    items={this.state.items} 
+                <List
+                    items={this.state.items}
                     markAsCompleted={this.markAsCompleted}
                     removeTask={this.removeTask}
                 />

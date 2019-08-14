@@ -11,6 +11,7 @@ import Header from './layout/Header/Header';
 
 // Component imports
 import Home from './Home/Home';
+import Todo from './Todo/Todo';
 
 function App() {    
     return (
@@ -18,6 +19,7 @@ function App() {
             <Header title="Learning React" />
             <Content>
                 <Home />
+                <Todo />
             </Content>
             <Footer />
         </div>
