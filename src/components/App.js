@@ -6,12 +6,13 @@ import './App.css';
 
 
 // Layout Component imports
-import Chart from './Chart/Chart';
 import Content from './layout/Content/Content';
 import Footer from './layout/Footer/Footer';
 import Header from './layout/Header/Header';
 
 // Component imports
+import Animation from './Animation/Animation';
+import Chart from './Chart/Chart';
 import Home from './Home/Home';
 import Todo from './Todo/Todo';
 import Timer from './Pomodoro/Timer';
@@ -49,6 +50,9 @@ class App extends Component {
                 <Header title="Learning React" />
                 <Content>
                     <Home />
+
+                    <Animation />
+
                     <Chart
                         columns={this.columns}
                         chartType={this.state.chartType}
