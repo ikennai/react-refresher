@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Timer.css';
 
 class Timer extends Component {
@@ -28,6 +28,7 @@ class Timer extends Component {
     }
 
     setDefaultTime = () => {
+        console.log('>>> setting default time');
         // Default time is 25 min
         this.setState({
             time: this.times.defaultTime
@@ -42,7 +43,7 @@ class Timer extends Component {
             }
         });
 
-        return this.setTimeForWork(this.times.defaultTime);
+        return this.setTime(this.times.defaultTime);
     }
 
     setTimeForShortBreak = () => {
@@ -53,7 +54,7 @@ class Timer extends Component {
             }
         });
 
-        return this.setTimeForShortBreak(this.times.shortBreak);
+        return this.setTime(this.times.shortBreak);
     }
 
     setTimeForLongBreak = () => {
@@ -109,6 +110,7 @@ class Timer extends Component {
 
     render() {
         const { alert: { message, type }, time } = this.state;
+
         return (
             <div className="Pomodoro">
                 <div className={`alert ${type}`}>
