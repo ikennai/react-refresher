@@ -13,19 +13,20 @@ class Home extends Component {
         }
     }
 
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                name: 'Ikenna Igwe'
-            })
-        }, 1000);
-    }
+    // componentDidMount() {
+    //     setTimeout(() => {
+    //         this.setState({
+    //             name: 'Ikenna Igwe'
+    //         })
+    //     }, 1000);
+    // }
 
     render() {
         return (
             <div className="Home">
-                <h2>Welcome to Future Design Works</h2>
-                <p>I'm the founder of the company, {this.state.name}.</p>
+                <p>Hey, {this.state.name} here.</p>
+                <p>This application is a collection of learning apps that I followed through from the React Cookbook. I wanted to start from beginning to end and brush up on my skills using React. The book has been pretty informative so far and I encourage you (if you haven't already) to take a look. Some of the samples are a little dated in areas but nothing has been incredibly hard to follow or modify with the latest updates in the React library / system.</p>
+                <p>While you're here feel free to check out my app <em>Gin Scrummy</em> <small>(comming soon)</small></p>
 
                 <button
                     style={{

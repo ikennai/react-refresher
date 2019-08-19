@@ -1,0 +1,28 @@
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .6em;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+
+    &__item {
+        background: #61dafb;
+        margin: 0 2px;
+        padding: 0;
+
+        a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background: white;
+            a {
+                color: black;
+            }
+        }
+    }
+}

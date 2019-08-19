@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer>&copy; Future Design Works {(new Date()).getFullYear()}</footer>
+        <footer>&copy; Just Refreshing React {(new Date()).getFullYear()}</footer>
     );
 };
 

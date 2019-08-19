@@ -8,6 +8,7 @@ import App from './components/App';
 import Chart from './components/Chart';
 import Error404 from './components/Error/404';
 import Home from './components/Home';
+import Notes from './components/Notes';
 import Numbers from './components/Numbers';
 import Person from './components/Person';
 import Timer from './components/Pomodoro';
@@ -20,6 +21,8 @@ const AppRoutes = () => (
             <Route path="/" component={Home} exact />
             <Route path="/animation" component={Animation} exact />
             <Route path="/chart" component={Chart} exact />
+            <Route path="/notes" component={Notes} exact />
+            <Route path="/notes/:noteId" component={Notes} exact />
             <Route path="/numbers" component={Numbers} exact />
             <Route path="/person" component={Person} exact />
             <Route path="/pomodoro" component={Timer} exact />
