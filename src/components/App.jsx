@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Helmet from 'react-helmet';
+import React from 'react';
+import { element } from 'prop-types';
+// import Helmet from 'react-helmet';
 
 // Asset imports
 // import logo from './logo.svg';
@@ -11,16 +12,32 @@ import Footer from './layout/Footer/Footer';
 import Header from './layout/Header/Header';
 
 // Component imports
-import Animation from './Animation/Animation';
-import Chart from './Chart/Chart';
-import Home from './Home/Home';
-import Numbers from './Numbers/Numbers';
-import Person from './Person/Person';
-import Todo from './Todo/Todo';
-import Timer from './Pomodoro/Timer';
-import Xss from './Xss/Xss';
+// import Animation from './Animation/Animation';
+// import Chart from './Chart/Chart';
+// import Home from './Home';
+// import Numbers from './Numbers/Numbers';
+// import Person from './Person/Person';
+// import Todo from './Todo/Todo';
+// import Timer from './Pomodoro/Timer';
+// import Xss from './Xss/Xss';
 
-class App extends Component {
+const App = (props) => (
+    <div className="App">
+        <Header title="Routing" />
+
+        <Content>
+            {props.children}
+        </Content>
+
+        <Footer />
+    </div>
+);
+
+App.propTypes = {
+    children: element
+};
+
+/* class App extends Component {
     constructor(props) {
         super(props);
 
@@ -50,9 +67,11 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header title="Learning React" />
+                <Header title="Routing" />
+
                 <Content>
-                    <Helmet
+                    { this.props.children }
+                    {/* <Helmet
                         title="Person Information"
                         meta={[
                             { name: 'title', content: 'Person Information' },
@@ -60,8 +79,8 @@ class App extends Component {
                         ]}
                     />
                     <Home />
-                    <Person />
-                    {/* <Xss /> */}
+                    <Person /> *}
+                    {/* <Xss /> *}
                     {/* <Numbers />
 
                     <Animation />
@@ -78,12 +97,12 @@ class App extends Component {
                     </p>
 
                     <Todo />
-                    <Timer /> */}
+                    <Timer /> *}
                 </Content>
                 <Footer />
             </div>
         );
     }
-}
+} */
 
 export default App;

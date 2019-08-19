@@ -14,7 +14,6 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        console.log(`>>> running componentDidMount`);
         setTimeout(() => {
             this.setState({
                 name: 'Ikenna Igwe'
@@ -23,14 +22,12 @@ class Home extends Component {
     }
 
     render() {
-        console.log(`Name: ${this.state.name}`);
-
         return (
             <div className="Home">
                 <h2>Welcome to Future Design Works</h2>
                 <p>I'm the founder of the company, {this.state.name}.</p>
 
-                <button 
+                <button
                     style={{
                         backgroundColor: 'gray',
                         border: '1px solid black'
