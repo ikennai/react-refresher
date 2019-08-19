@@ -24,6 +24,7 @@ const Header = (props) => {
                 <li className="navigation__item"><Link to="/">Home</Link></li>
                 <li className="navigation__item"><Link to="/animation">Animation</Link></li>
                 <li className="navigation__item"><Link to="/chart">Chart</Link></li>
+                <li className="navigation__item"><Link to="/coins">Coins</Link></li>
                 <li className="navigation__item"><Link to="/notes">Notes</Link></li>
                 <li className="navigation__item"><Link to="/numbers">Numbers</Link></li>
                 <li className="navigation__item"><Link to="/person">Person</Link></li>

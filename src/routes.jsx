@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import Animation from './components/Animation';
 import App from './components/App';
 import Chart from './components/Chart';
+import Coins from './components/Coins';
 import Error404 from './components/Error/404';
 import Home from './components/Home';
 import Notes from './components/Notes';
@@ -21,6 +22,7 @@ const AppRoutes = () => (
             <Route path="/" component={Home} exact />
             <Route path="/animation" component={Animation} exact />
             <Route path="/chart" component={Chart} exact />
+            <Route path="/coins" component={Coins} exact />
             <Route path="/notes" component={Notes} exact />
             <Route path="/notes/:noteId" component={Notes} exact />
             <Route path="/numbers" component={Numbers} exact />

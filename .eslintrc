@@ -8,24 +8,16 @@
         "window": true
     },
     "rules": {
-        "arrow-parens": "error",
+        "arrow-parens": "off",
         "comma-dangle": "off",
         "function-paren-newline": "off",
         "indent": "off",
         "react/jsx-indent": "off",
-        // "react/jsx-filename-extension": "error",
         "max-len": [
             1,
             150
         ],
         "no-param-reassign": "off",
         "react/require-default-props": "off"
-    },
-    /* "parserOptions": {
-        "ecmaVersion": 6,
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "sourceType": "module" // TODO: Look this up
-    } */
+    }
 }

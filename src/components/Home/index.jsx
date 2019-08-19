@@ -17,8 +17,9 @@ const Home = (props) => {
             <p>While you're here feel free to check out my app <em>Gin Scrummy</em> <small>(comming soon)</small></p>
 
             <p>
-                You are using:
-                <strong>{isMobile ? 'mobile' : 'desktop'}</strong>
+                You are using a
+                <strong>{isMobile ? ' mobile ' : ' desktop '}</strong>
+                device.
             </p>
 
             <button
