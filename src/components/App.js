@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-
 // Layout Component imports
 import Content from './layout/Content/Content';
 import Footer from './layout/Footer/Footer';
@@ -14,8 +13,11 @@ import Header from './layout/Header/Header';
 import Animation from './Animation/Animation';
 import Chart from './Chart/Chart';
 import Home from './Home/Home';
+import Numbers from './Numbers/Numbers';
+import Person from './Person/Person';
 import Todo from './Todo/Todo';
 import Timer from './Pomodoro/Timer';
+import Xss from './Xss/Xss';
 
 class App extends Component {
     constructor(props) {
@@ -50,6 +52,9 @@ class App extends Component {
                 <Header title="Learning React" />
                 <Content>
                     <Home />
+                    <Person />
+                    {/* <Xss /> */}
+                    {/* <Numbers />
 
                     <Animation />
 
@@ -65,7 +70,7 @@ class App extends Component {
                     </p>
 
                     <Todo />
-                    <Timer />
+                    <Timer /> */}
                 </Content>
                 <Footer />
             </div>

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // Style imports
 import './Animation.css';
@@ -35,7 +35,7 @@ class Animation extends Component {
 
     toggleCollapse = () => {
         this.setState({
-            show: !this.state.show 
+            show: !this.state.show
         });
     }
 
@@ -47,7 +47,7 @@ class Animation extends Component {
                     {this.state.show ? 'Collapse' : 'Expand'}
                 </button>
 
-                <div 
+                <div
                     id="fade"
                     className={
                         this.state.show ? 'transition show' : 'transition'

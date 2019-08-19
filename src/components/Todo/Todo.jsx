@@ -30,7 +30,7 @@ class Todo extends Component {
         this.setState({ ...state });
     }
 
-    handleOnChange = e => {
+    handleOnChange = (e) => {
         const { target: { value } } = e;
 
         // Update our task state with the input value
@@ -39,7 +39,7 @@ class Todo extends Component {
         });
     }
 
-    handleOnSubmit = e => {
+    handleOnSubmit = (e) => {
         // Prevent default to avoid the actual form submit
         e.preventDefault();
 
@@ -66,9 +66,9 @@ class Todo extends Component {
         }
     }
 
-    markAsCompleted = id => {
+    markAsCompleted = (id) => {
         // Finding the task by id...
-        const foundTask = this.state.items.find(task => task.id === id);
+        const foundTask = this.state.items.find((task) => task.id === id);
 
         // Updating the completed status...
         foundTask.completed = true;
@@ -84,9 +84,9 @@ class Todo extends Component {
         localStorage.setItem('todoState', JSON.stringify({ items: this.state.items }));
     }
 
-    removeTask = id => {
+    removeTask = (id) => {
         // Filtering the tasks by removing the specific task id...
-        const filteredTasks = this.state.items.filter(task => task.id !== id);
+        const filteredTasks = this.state.items.filter((task) => task.id !== id);
 
         // Updating items state...
         this.setState({

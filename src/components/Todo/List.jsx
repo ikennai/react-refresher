@@ -1,13 +1,13 @@
 import React from 'react';
 
-const List = props => (
+const List = (props) => (
     <ul>
         {props.items.map((item, key) => (
-            <li 
+            <li
                 key={key}
                 className={`${item.completed ? 'completed' : 'pending'}`}>
                     {/*
-                     * IF the task is completed we assign the 
+                     * IF the task is completed we assign the
                      * .completed class otherwise .pending
                      */}
                      {item.task}
@@ -17,7 +17,7 @@ const List = props => (
                            * Using a callback on the onClick we call our
                            * markAsCompleted function
                          */}
-                         <span 
+                         <span
                             className={item.completed ? 'hide': 'done'}
                             onClick={() => props.markAsCompleted(item.id)}>
                                 <i className="fa fa-check"></i>
@@ -27,8 +27,8 @@ const List = props => (
                           * Using a callback on the onClick we call
                           * our removeTask function
                         */}
-                        <span 
-                            className="trash" 
+                        <span
+                            className="trash"
                             onClick={() => props.removeTask(item.id)}>
                             <i className="fa fa-trash"></i>
                         </span>

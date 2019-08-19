@@ -1,11 +1,31 @@
 {
-    // "extends": "eslint:recommended",
     "parser": "babel-eslint",
-    "parserOptions": {
+    // "extends": "airbnb",
+    "globals": {
+        "document": true,
+        "fetch": true,
+        "navigator": true,
+        "window": true
+    },
+    "rules": {
+        "arrow-parens": "error",
+        "comma-dangle": "off",
+        "function-paren-newline": "off",
+        "indent": "off",
+        "react/jsx-indent": "off",
+        // "react/jsx-filename-extension": "error",
+        "max-len": [
+            1,
+            150
+        ],
+        "no-param-reassign": "off",
+        "react/require-default-props": "off"
+    },
+    /* "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
             "jsx": true
         },
         "sourceType": "module" // TODO: Look this up
-    }
+    } */
 }

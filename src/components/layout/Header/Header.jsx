@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // Image imports
 import logo from '../../../shared/images/logo.svg';
 
-const Header = props => {
+const Header = (props) => {
     const {
         title = 'Learning React',
         url = 'http://localhost:3002'

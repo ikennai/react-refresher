@@ -1,47 +1,54 @@
 {
-  "name": "react-refresher",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "c3": "^0.7.4",
-    "moment": "^2.24.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "uuidv4": "^4.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "lint": "eslint --ext .jsx,.js src",
-    "lint:fix": "eslint --ext .jsx, .js --fix src",
-    "test": "jest src",
-    "testb": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": ""
+    "name": "react-refresher",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "c3": "^0.7.4",
+        "eslint": "5.16.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.14.3",
+        "moment": "^2.24.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-scripts": "3.0.1",
+        "serialize-javascript": "^1.7.0",
+        "uuidv4": "^4.0.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "lint": "eslint --ext .jsx,.js src",
+        "lint:fix": "eslint --ext .jsx, .js --fix src",
+        "test": "jest src",
+        "testb": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "husky": {
+        "hooks": {
+            "post-merge": "npm isntall",
+            "post-rewrite": "npm install",
+            "pre-commit": "npm run lint",
+            "pre-push": ""
+        }
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "husky": "^3.0.2"
     }
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "husky": "^3.0.2"
-  }
 }

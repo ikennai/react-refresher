@@ -68,7 +68,7 @@ class Timer extends Component {
         return this.setTime(this.times.longBreak);
     }
 
-    setTime = newTime => {
+    setTime = (newTime) => {
         this.restartInterval();
 
         this.setState({
