@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 
 // Asset imports
 // import logo from './logo.svg';
@@ -51,6 +52,13 @@ class App extends Component {
             <div className="App">
                 <Header title="Learning React" />
                 <Content>
+                    <Helmet
+                        title="Person Information"
+                        meta={[
+                            { name: 'title', content: 'Person Information' },
+                            { name: 'description', content: 'This recipe talks about React' }
+                        ]}
+                    />
                     <Home />
                     <Person />
                     {/* <Xss /> */}
