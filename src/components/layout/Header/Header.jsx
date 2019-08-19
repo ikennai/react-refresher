@@ -11,7 +11,7 @@ import logo from '../../../shared/images/logo.svg';
 
 const Header = (props) => {
     const {
-        title = 'Learning React',
+        title = 'React Refresher',
         url = 'http://localhost:3002'
     } = props;
 

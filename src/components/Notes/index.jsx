@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import './Notes.scss';
 
 class Notes extends Component {
@@ -55,6 +56,7 @@ class Notes extends Component {
         }
         return (
             <div className="Notes">
+                <Helmet title="Notes" meta={[]} />
                 <h1>Notes</h1>
 
                 {/* We render our selectedNote or all notes */}

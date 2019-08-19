@@ -23,7 +23,7 @@ import Header from './layout/Header/Header';
 
 const App = (props) => (
     <div className="App">
-        <Header title="Routing" />
+        <Header />
 
         <Content>
             {props.children}
