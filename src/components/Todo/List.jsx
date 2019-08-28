@@ -1,8 +1,14 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import './List.scss';
 
 const List = (props) => (
     <ul>
-        {props.items.map((item, key) => (
+        <ReactCSSTransitionGroup
+            transitionName="todo"
+            transitionAppear={true}
+        >
+            {props.items.map((item, key) => (
             <li
                 key={key}
                 className={`${item.completed ? 'completed' : 'pending'}`}>
@@ -35,6 +41,7 @@ const List = (props) => (
                      </div>
             </li>
         ))}
+        </ReactCSSTransitionGroup>
     </ul>
 );
 
